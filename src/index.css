@@ -5,6 +5,7 @@
 
 body {
     @apply w-screen min-h-screen flex flex-col items-center font-sans;
+    overflow-x: hidden;
     background: #121214 url('assets/Fundo.svg') top center no-repeat;
 }
 
