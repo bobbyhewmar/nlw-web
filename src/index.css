@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply w-screen min-h-screen flex flex-col items-center font-sans;
+    background: #121214 url('assets/Fundo.svg') top center no-repeat;
+}
+
+.main {
+    @apply flex flex-col w-full max-w-6xl items-center;
+}
+
+
+.slick-slide {
+    padding: 0 0.25rem;
+}
+
+
+.slick-list {
+    padding: 0 -0.25rem;
+}
