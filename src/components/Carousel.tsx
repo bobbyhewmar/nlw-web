@@ -30,8 +30,17 @@ function PrevArrow({ onClick }: Props) {
   );
 }
 
-export function Carousel() {
-  var settings = {
+
+type Data = {
+  data?: {
+    thumb: string
+    title: string
+    totalAdverts: number
+  }[]
+}
+
+export function Carousel({ data }: Data) {
+  const settings = {
     autoplay: true,
     dots: true,
     infinite: true,
@@ -68,30 +77,17 @@ export function Carousel() {
   return (
     <div className="w-full mt-8">
       <Slider {...settings}>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>1</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>2</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>3</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>4</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>5</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>6</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>6</h3>
-        </div>
-        <div className="aspect-[3/4] h-60 bg-slate-500 rounded-lg">
-            <h3>6</h3>
-        </div>
+        {
+          data && data.map(({thumb, title, totalAdverts}, index) => (
+            <div key={index} className="aspect-[3/4] h-60 rounded-lg relative">
+                <div className="absolute w-full h-full rounded-lg bg-gradient-to-t from-black/95 to-black/0 text-white flex flex-col justify-end p-4 z-10">
+                  <span className="font-bold">{title}</span>
+                  <span className="text-sm">{totalAdverts} Anúncios</span>
+                </div>
+                <img src={thumb} width={180} height={240} className="relative w-full h-full object-cover rounded-lg z-0" />
+            </div>
+          ))
+        }
       </Slider>
     </div>
   );

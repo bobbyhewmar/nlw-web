@@ -1,6 +1,6 @@
 export function Title () {
     return (
-        <span 
+        <h1 
             className="
                 px-4
                 md:px-0
@@ -11,6 +11,6 @@ export function Title () {
                 text-center
             ">
                 Seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9572FC] via-[#43E7AD] to-[#E1D55D]">duo</span> está aqui.
-            </span>
+            </h1>
         )
 }
