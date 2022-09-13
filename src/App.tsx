@@ -3,6 +3,7 @@ import { Carousel } from "./components/Carousel";
 import { DuoPublicher } from "./components/DuoPublicher";
 import { Logo } from "./components/Logo";
 import { Modal } from "./components/Modal";
+import { RedirectToCodeSource } from "./components/RedirectToCodeSource";
 import { Title } from "./components/Title";
 import { res } from "./utils/data"
 
@@ -23,6 +24,7 @@ function App() {
     <Title />
     <Carousel data={data} />
     <DuoPublicher openModal={openModal} />
+    <RedirectToCodeSource url="https://github.com/bobbyhewmar/nlw-web" />
     <Modal closeModal={closeModal} isOpen={isOpen} />
   </>
 }

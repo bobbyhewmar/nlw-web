@@ -11,8 +11,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.1",
     "daisyui": "^2.27.0",
+    "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "react-slick": "^0.29.0"
   },
   "devDependencies": {
